@@ -7,8 +7,7 @@ pidgin (2.10.4-1blankon1) rote; urgency=low
     - 11_buddy_list_really_show.patch
     - 13_sounds_and_timers.patch
     - 60_1024x600_gtkpounce.c.patch
-    - 60_1024x600_gtkprefs.c.patch
-    - 70_farstream_rename.patch
+    - 60_1024x600_gtkprefs.c.patch    
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 13 May 2012 02:23:57 +0700
 
