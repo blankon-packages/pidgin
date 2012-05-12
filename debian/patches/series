@@ -5,5 +5,4 @@
 60_1024x600_gtkpounce.c.patch
 60_1024x600_gtkprefs.c.patch
 libnssckbi_path.patch
-irc_disable_periodic_who.patch
 70_farstream_rename.patch
