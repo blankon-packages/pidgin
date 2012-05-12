@@ -1,0 +1,30 @@
+=== modified file 'pidgin/gtkblist.c'
+Index: pidgin-2.10.2/pidgin/gtkblist.c
+===================================================================
+--- pidgin-2.10.2.orig/pidgin/gtkblist.c	2012-03-16 12:33:22.640064521 +0100
++++ pidgin-2.10.2/pidgin/gtkblist.c	2012-03-16 12:33:55.356065764 +0100
+@@ -6910,6 +6910,12 @@
+ 	purple_prefs_disconnect_by_handle(pidgin_blist_get_handle());
+ }
+ 
++static gboolean keep_above_idle_cb (gpointer data)
++{
++	gtk_window_set_keep_above(GTK_WINDOW(data), FALSE);
++	return FALSE;
++}
++
+ static void pidgin_blist_set_visible(PurpleBuddyList *list, gboolean show)
+ {
+ 	if (!(gtkblist && gtkblist->window))
+@@ -6919,7 +6925,11 @@
+ 		if(!PIDGIN_WINDOW_ICONIFIED(gtkblist->window) && !GTK_WIDGET_VISIBLE(gtkblist->window))
+ 			purple_signal_emit(pidgin_blist_get_handle(), "gtkblist-unhiding", gtkblist);
+ 		pidgin_blist_restore_position();
++		gtk_widget_show(GTK_WIDGET(gtkblist->window));
++		gtk_window_deiconify(GTK_WINDOW(gtkblist->window));
+ 		gtk_window_present(GTK_WINDOW(gtkblist->window));
++		gtk_window_set_keep_above(GTK_WINDOW(gtkblist->window), TRUE);
++		g_idle_add(keep_above_idle_cb, gtkblist->window);
+ 	} else {
+ 		if(visibility_manager_count) {
+ 			purple_signal_emit(pidgin_blist_get_handle(), "gtkblist-hiding", gtkblist);
