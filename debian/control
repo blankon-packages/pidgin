@@ -23,8 +23,8 @@ Homepage: http://www.pidgin.im
 
 Package: libpurple0
 Architecture: any
-Depends: pidgin-data (>= ${source:Upstream-Version}), pidgin-data (<< ${source:Upstream-Version}-z), ${shlibs:Depends}, ${misc:Depends}, ${perl:Depends}, libsasl2-modules
-Recommends: ca-certificates, libpurple-bin
+Depends: pidgin-data (>= ${source:Upstream-Version}), pidgin-data (<< ${source:Upstream-Version}-z), ${shlibs:Depends}, ${misc:Depends}, ${perl:Depends}, libsasl2-modules 
+Recommends: ca-certificates, libpurple-bin, pidgin-libnotify
 Suggests: ${shlibs:Suggests}
 Conflicts: network-manager (<< 0.9.0)
 Description: multi-protocol instant messaging library
