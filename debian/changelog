@@ -1,3 +1,24 @@
+pidgin (2.10.5-1blankon1) rote; urgency=low
+
+  * New upstream release.
+  * Merge whit sid
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 06 Jul 2012 19:31:30 +0700
+
+pidgin (2.10.5-1) unstable; urgency=low
+
+  * Imported Upstream version 2.10.5
+
+ -- Ari Pollak <ari@debian.org>  Wed, 04 Jul 2012 13:50:16 -0400
+
+pidgin (2.10.4-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Build-depends against libfarstream-0.1-dev instead of
+    libgstfarsight0.10-dev (Closes: #664527)
+
+ -- Laurent Bigonville <bigon@debian.org>  Tue, 15 May 2012 12:37:02 +0200
+
 pidgin (2.10.4-1blankon2) rote; urgency=low
 
   * Active notify at prefs.xml
