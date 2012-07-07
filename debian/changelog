@@ -1,3 +1,16 @@
+pidgin (2.10.6-1blankon1) rote; urgency=low
+
+  * New Upstream release.
+  * Merge whit sid
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 07 Jul 2012 14:43:31 +0700
+
+pidgin (2.10.6-1) unstable; urgency=low
+
+  * Imported Upstream version 2.10.6
+
+ -- Ari Pollak <ari@debian.org>  Fri, 06 Jul 2012 19:17:08 -0400
+
 pidgin (2.10.5-1blankon1) rote; urgency=low
 
   * New upstream release.
