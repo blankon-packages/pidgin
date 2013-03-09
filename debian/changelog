@@ -1,3 +1,9 @@
+pidgin (2.10.7-2.blankon2) suroboyo; urgency=low
+
+  * add patches.
+
+ -- Aris Febrianto <ariesfebrianto@gmail.com>  Sat, 09 Mar 2013 17:00:35 +0700
+
 pidgin (2.10.7-2.blankon1) suroboyo; urgency=low
 
   * New upstream release.
