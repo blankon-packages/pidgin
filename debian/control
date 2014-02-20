@@ -1,8 +1,8 @@
 Source: pidgin
 Section: net
 Priority: optional
-Maintainer: BLankOn Developers <blankon-dev@googlegroups.com>
-XSBC-original-Maintainer: Ari Pollak <ari@debian.org>
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
+XSBC-Original-Maintainer: Ari Pollak <ari@debian.org>
 Build-Depends: cdbs (>= 0.4.53), debhelper (>= 7), intltool, gconf2,
  hardening-wrapper,
  libgtk2.0-dev (>= 2.10.0), libxss-dev, libmeanwhile-dev,
