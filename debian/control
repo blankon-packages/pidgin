@@ -11,18 +11,17 @@ Build-Depends: cdbs (>= 0.4.53), debhelper (>= 7), intltool, gconf2,
  libstartup-notification0-dev, libzephyr-dev, libxml2-dev,
  libdbus-glib-1-dev, dbus, python (>= 2.4), libavahi-client-dev,
  libavahi-glib-dev, libxml-parser-perl, libncursesw5-dev, libsasl2-dev,
- libgadu-dev (>= 1:1.11.0-2),
+ libgadu-dev (>= 1:1.12.0-5),
  xsltproc, doxygen, libfarstream-0.1-dev,
  libgstreamer-plugins-base0.10-dev,
- network-manager-dev (>= 0.9.0),
+ network-manager-dev,
  libsqlite3-dev (>= 3.3), libidn11-dev, ca-certificates
-Standards-Version: 3.8.3
+Standards-Version: 3.9.6
 Vcs-Git: git://git.debian.org/git/collab-maint/pidgin.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/pidgin.git
 Homepage: http://www.pidgin.im
 
 Package: libpurple0
-Section: devel
 Architecture: any
 Depends: pidgin-data (>= ${source:Upstream-Version}), pidgin-data (<< ${source:Upstream-Version}-z), ${shlibs:Depends}, ${misc:Depends}, ${perl:Depends}, libsasl2-modules
 Recommends: ca-certificates, libpurple-bin
@@ -42,7 +41,8 @@ Description: multi-protocol instant messaging library
 Package: pidgin
 Architecture: any
 Depends: pidgin-data (>= ${source:Upstream-Version}), pidgin-data (<< ${source:Upstream-Version}-z), ${shlibs:Depends}, ${misc:Depends}, ${perl:Depends}
-Recommends: gstreamer0.10-plugins-base, gstreamer0.10-plugins-good
+Recommends: gstreamer0.10-alsa, gstreamer0.10-ffmpeg,
+ gstreamer0.10-plugins-base, gstreamer0.10-plugins-good
 Suggests: ${shlibs:Suggests}
 Description: graphical multi-protocol instant messaging client for X
  Pidgin is a graphical, modular instant messaging client capable of using
