@@ -1,3 +1,9 @@
+pidgin (2.10.11-1blankon2) rebuild; urgency=medium
+
+  * Rebuild 
+
+ -- mhy <dotovr@mhy>  Sun, 20 Dec 2015 22:41:30 +0700
+
 pidgin (2.10.11-1blankon1) tambora; urgency=low
 
   * New Upstream Release
