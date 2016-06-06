@@ -1,0 +1,12 @@
+diff -Naur pidgin-2.10.4.orig/libpurple/protocols/irc/irc.h pidgin-2.10.4/libpurple/protocols/irc/irc.h
+--- pidgin-2.10.4.orig/libpurple/protocols/irc/irc.h	2012-05-07 10:37:23.000000000 +0700
++++ pidgin-2.10.4/libpurple/protocols/irc/irc.h	2012-05-13 02:11:51.910509522 +0700
+@@ -30,7 +30,7 @@
+ #include "roomlist.h"
+ #include "sslconn.h"
+ 
+-#define IRC_DEFAULT_SERVER "irc.freenode.net"
++#define IRC_DEFAULT_SERVER "irc.blankon.in"
+ #define IRC_DEFAULT_PORT 6667
+ #define IRC_DEFAULT_SSL_PORT 994
+ 
