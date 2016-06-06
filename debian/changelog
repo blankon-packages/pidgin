@@ -1,15 +1,39 @@
-pidgin (2.10.11-1blankon2) tambora; urgency=medium
+pidgin (2.10.12-1blankon1) tambora; urgency=medium
 
   * Rebuild 
 
- -- mhy <dotovr@mhy>  Sun, 20 Dec 2015 22:41:30 +0700
+ -- dotovr <dotovr@preko>  Mon, 06 Jun 2016 22:30:38 +0700
 
-pidgin (2.10.11-1blankon1) tambora; urgency=low
+pidgin (2.10.12-1) unstable; urgency=low
 
-  * New Upstream Release
-  * Merge Whits Sid
+  [ Peter Spiess-Knafl ]
+  * Fix extra end tag in prefs.xml (Closes: #589631)
 
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 12 Apr 2015 02:27:09 +0700
+  [ Ari Pollak ]
+  * Imported upstream version 2.10.12 (Closes: #822782)
+  * Install upstream appdata (Closes: #785759)
+
+ -- Ari Pollak <ari@debian.org>  Fri, 23 Oct 2015 21:29:28 -0400
+
+pidgin (2.10.11-1.1) unstable; urgency=medium
+
+  [ Bernhard Schmidt ]
+  * GStreamer 1.0 and libfarstream 0.2 support (Closes: #785926, #731122)
+    - Import patch from Fedora and refresh for Debian
+      + almost the same patch has been in Ubuntu for a while
+    - run autoreconf through dh-autoreconf/cdbs
+    - Bump Build-Depends for src:pidgin
+    - Bump Recommends for pidgin
+      + replace gstreamer0.10-ffmpeg with gstreamer1.0-libav
+
+  [ Ari Pollak ]
+  * Add gstreamer0.10-pulseaudio as alternative to gstreamer0.10-alsa 
+    in Recommends (Closes: #772116)
+
+  [ Sebastian Dröge ]
+  * Non-Maintainer Upload with Bernhard's patch from #785926.
+
+ -- Sebastian Dröge <slomo@debian.org>  Sat, 17 Oct 2015 20:55:57 +0300
 
 pidgin (2.10.11-1) unstable; urgency=low
 
@@ -36,24 +60,12 @@ pidgin (2.10.10-1) unstable; urgency=high
 
  -- Ari Pollak <ari@debian.org>  Thu, 16 Oct 2014 21:01:32 -0400
 
-pidgin (2.10.9-1blankon0.9.0.1) suroboyo-updates; urgency=low
-
-  * New Upstream Release 
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 20 Feb 2014 20:05:27 +0700
-
 pidgin (2.10.9-1) unstable; urgency=medium
 
   * Imported Upstream version 2.10.9
     - Fixes XMPP connection problem (Closes: #737509)
 
  -- Ari Pollak <ari@debian.org>  Mon, 03 Feb 2014 20:12:36 -0500
-
-pidgin (2.10.8-1blankon1) suroboyo; urgency=low
-
-  * New Upstream Release 
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 30 Jan 2014 20:04:47 +0700
 
 pidgin (2.10.8-1) unstable; urgency=high
 
@@ -67,30 +79,6 @@ pidgin (2.10.8-1) unstable; urgency=high
 
  -- Ari Pollak <ari@debian.org>  Sat, 25 Jan 2014 11:53:21 -0500
 
-pidgin (2.10.7-2blankon4) suroboyo; urgency=low
-
-  * Fix Version
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 09 Sep 2013 18:29:01 +0700
-
-pidgin (2.10.7-2.blankon3) suroboyo; urgency=low
-
-  * Rebuild for perl 
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 09 Sep 2013 12:21:00 +0700
-
-pidgin (2.10.7-2.blankon2) suroboyo; urgency=low
-
-  * add patches.
-
- -- Aris Febrianto <ariesfebrianto@gmail.com>  Sat, 09 Mar 2013 17:00:35 +0700
-
-pidgin (2.10.7-2.blankon1) suroboyo; urgency=low
-
-  * New upstream release.
-
- -- Aris Febrianto <ariesfebrianto@gmail.com>  Sat, 09 Mar 2013 15:43:51 +0700
-
 pidgin (2.10.7-2) unstable; urgency=low
 
   * Fix IRC protocol loading by linking with SASL (Closes: #701541)
@@ -99,11 +87,19 @@ pidgin (2.10.7-2) unstable; urgency=low
 
  -- Ari Pollak <ari@debian.org>  Sun, 24 Feb 2013 11:13:12 -0500
 
-pidgin (2.10.6-2blankon1) rote-updates; urgency=low
+pidgin (2.10.7-1) unstable; urgency=low
 
-  * New upstream updates/merge whit sid 
+  * Imported Upstream version 2.10.7
+  * Move libpurple0 to section devel, to reflect #700141
 
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 15 Jan 2013 02:35:40 +0000
+ -- Ari Pollak <ari@debian.org>  Sat, 23 Feb 2013 11:32:27 -0500
+
+pidgin (2.10.6-3) unstable; urgency=high
+
+  * Apply patches from 2.10.7 to fix CVE-2013-0271, CVE-2013-0272,
+    CVE-2013-0273, and CVE-2013-0274
+
+ -- Ari Pollak <ari@debian.org>  Mon, 11 Feb 2013 20:41:21 -0500
 
 pidgin (2.10.6-2) unstable; urgency=low
 
@@ -111,25 +107,11 @@ pidgin (2.10.6-2) unstable; urgency=low
 
  -- Ari Pollak <ari@debian.org>  Tue, 25 Sep 2012 21:42:44 -0400
 
-pidgin (2.10.6-1blankon1) rote; urgency=low
-
-  * New Upstream release.
-  * Merge whit sid
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 07 Jul 2012 14:43:31 +0700
-
 pidgin (2.10.6-1) unstable; urgency=low
 
   * Imported Upstream version 2.10.6
 
  -- Ari Pollak <ari@debian.org>  Fri, 06 Jul 2012 19:17:08 -0400
-
-pidgin (2.10.5-1blankon1) rote; urgency=low
-
-  * New upstream release.
-  * Merge whit sid
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 06 Jul 2012 19:31:30 +0700
 
 pidgin (2.10.5-1) unstable; urgency=low
 
@@ -144,26 +126,6 @@ pidgin (2.10.4-1.1) unstable; urgency=low
     libgstfarsight0.10-dev (Closes: #664527)
 
  -- Laurent Bigonville <bigon@debian.org>  Tue, 15 May 2012 12:37:02 +0200
-
-pidgin (2.10.4-1blankon2) rote; urgency=low
-
-  * Active notify at prefs.xml
-  * Added pidgin-libnotify at recommends
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 13 May 2012 05:12:04 +0000
-
-pidgin (2.10.4-1blankon1) rote; urgency=low
-
-  * debian/control Maintainer.
-  * Added patch
-    - 01_blankon-irc-blankon-in.patch
-    - 10_docklet_default_off.patch
-    - 11_buddy_list_really_show.patch
-    - 13_sounds_and_timers.patch
-    - 60_1024x600_gtkpounce.c.patch
-    - 60_1024x600_gtkprefs.c.patch    
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 13 May 2012 02:23:57 +0700
 
 pidgin (2.10.4-1) unstable; urgency=low
 

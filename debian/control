@@ -1,21 +1,20 @@
 Source: pidgin
 Section: net
 Priority: optional
-Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
-XSBC-Original-Maintainer: Ari Pollak <ari@debian.org>
-Build-Depends: cdbs (>= 0.4.53), debhelper (>= 7), intltool, gconf2,
- hardening-wrapper,
+Maintainer: Ari Pollak <ari@debian.org>
+Build-Depends: cdbs, debhelper (>= 7), hardening-wrapper, intltool, gconf2,
  libgtk2.0-dev (>= 2.10.0), libxss-dev, libmeanwhile-dev,
- libnss3-dev (>= 3.11.7), tcl-dev, tk-dev, libgstreamer0.10-dev,
+ libnss3-dev (>= 3.11.7), tcl-dev, tk-dev, libgstreamer1.0-dev,
  libgtkspell-dev, libltdl3-dev, libperl-dev,
  libstartup-notification0-dev, libzephyr-dev, libxml2-dev,
  libdbus-glib-1-dev, dbus, python (>= 2.4), libavahi-client-dev,
  libavahi-glib-dev, libxml-parser-perl, libncursesw5-dev, libsasl2-dev,
  libgadu-dev (>= 1:1.12.0-5),
- xsltproc, doxygen, libfarstream-0.1-dev,
- libgstreamer-plugins-base0.10-dev,
- network-manager-dev,
- libsqlite3-dev (>= 3.3), libidn11-dev, ca-certificates
+ xsltproc, doxygen, libfarstream-0.2-dev,
+ libgstreamer-plugins-base1.0-dev,
+ network-manager-dev (>= 0.9.0),
+ libsqlite3-dev (>= 3.3), libidn11-dev, ca-certificates,
+ dh-autoreconf
 Standards-Version: 3.9.6
 Vcs-Git: git://git.debian.org/git/collab-maint/pidgin.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/pidgin.git
@@ -35,14 +34,14 @@ Description: multi-protocol instant messaging library
  Bonjour, Groupwise, Sametime, SIMPLE, MySpaceIM, and MXit.
  .
  Some extra packages are suggested to use increased functionality:
-  * tcl8.5, tk8.5:
+  * libtcl8.6, libtk8.6:
     - Support for writing plugins with Tcl/Tk
 
 Package: pidgin
 Architecture: any
 Depends: pidgin-data (>= ${source:Upstream-Version}), pidgin-data (<< ${source:Upstream-Version}-z), ${shlibs:Depends}, ${misc:Depends}, ${perl:Depends}
-Recommends: gstreamer0.10-alsa, gstreamer0.10-ffmpeg,
- gstreamer0.10-plugins-base, gstreamer0.10-plugins-good
+Recommends: gstreamer1.0-alsa | gstreamer1.0-pulseaudio,
+ gstreamer1.0-libav, gstreamer1.0-plugins-base, gstreamer1.0-plugins-good
 Suggests: ${shlibs:Suggests}
 Description: graphical multi-protocol instant messaging client for X
  Pidgin is a graphical, modular instant messaging client capable of using
